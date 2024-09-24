@@ -6,4 +6,4 @@
       shell : docker pull subhajeetlahiri/scicalc:latest
 
     - name: Run the SciCalc Docker container
-      shell : docker run -d -p 3000:3000 --name scicalc_cont subhajeetlahiri/scicalc:latest
+      shell : docker run --init -d -p 3000:3000 --name scicalc_cont subhajeetlahiri/scicalc:latest
