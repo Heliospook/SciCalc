@@ -1,0 +1,9 @@
+---
+- name: Deploy SciCalc Docker Image
+  hosts: local
+  tasks:
+    - name: Pull the SciCalc Docker image
+      shell : docker pull subhajeetlahiri/scicalc:latest
+
+    - name: Run the SciCalc Docker container
+      shell : docker run -d -p 3000:3000 --name scicalc_cont subhajeetlahiri/scicalc:latest
