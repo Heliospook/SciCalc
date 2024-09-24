@@ -19,7 +19,7 @@ public class CalcControllerTests {
 
     @ParameterizedTest
     @CsvSource({
-            "48.56, 6.96",
+            "48.56, 6.97",
             "9.0, 3.00",
             "0.0, 0.00"
     })
@@ -70,7 +70,7 @@ public class CalcControllerTests {
     @ParameterizedTest
     @CsvSource({
             "48.56, 3.88",
-            "2.71, 0.99",
+            "2.71, 1.00",
     })
     public void testPositiveLog(float input, String expectedOutput) throws Exception {
         mockMvc.perform(get("/ln")
@@ -85,7 +85,7 @@ public class CalcControllerTests {
             "0",
     })
     public void testNegativeLog(float input) throws Exception{
-        mockMvc.perform(get("/root")
+        mockMvc.perform(get("/ln")
                         .param("x", String.valueOf(input)))
                 .andExpect(status().isOk())
                 .andExpect(content().string("Negative/Zero input to natural logarithm"));
