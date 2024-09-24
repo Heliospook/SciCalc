@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.subhajeet</groupId>
 	<artifactId>SciCalc</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0</version>
 	<name>SciCalc</name>
 	<description>Scientific calculator application</description>
 	<url/>
